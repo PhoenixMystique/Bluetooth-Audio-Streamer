@@ -6,13 +6,13 @@ import android.view.View
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity(){
-var text:TextView= findViewById(R.id.textView)
+lateinit var text:TextView
 lateinit var recording: Recording
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+text= findViewById(R.id.textView)
     }
 
     fun record(view:View){
@@ -26,6 +26,14 @@ lateinit var recording: Recording
         }
         recording=Recording()
         recording.checkAndRecord(this,BluetoothRecording,true)
+
+    }
+   fun StopRecprd(view: View){
+
+
+    }
+    fun Play(view:View){
+
 
     }
 
